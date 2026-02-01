@@ -1,6 +1,16 @@
 export interface Event {
-  id: number;
+  id: string;
   title: string;
-  date: string;
+  slug: string;
+  description: string;
+  shortDescription: string;
+  eventDate: Date | string;
   location: string;
+  status: 'completed' | 'upcoming';
+  mainImage: string;
+  galleryImages?: string[];
+  organizer?: string;
+  attendees?: number;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
 }
